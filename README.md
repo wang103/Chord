@@ -26,14 +26,14 @@ a map of all its key/file pairs.
 In addition, each node also keep track of its predecessor.
 
 When a node just launches, we launch two extra threads, one is for fixing 
-finger table, it is called "fix_fingers()*. Another is for fixing successor 
+finger table, it is called "fix_fingers()". Another is for fixing successor 
 and transfering key/file, it is called "stabilizer()".
 
 These two threads run periodically, if the user did not specify an interval,
 we set the period to be 1 seconds.
 
 When a node changes its predecessor, we transfer some of the node's key/file
-to its new predecessor. The code for transfering key/file is in 'transfer_keys()'.
+to its new predecessor. The code for transfering key/file is in "transfer_keys()".
 
 Everything else is exactly like the algorithms in chord.pdf, so currency and other
-issues are handled.
+issues are handled correctly.
